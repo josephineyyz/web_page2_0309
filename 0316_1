@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ouvrir</title>
+</head>
+<body>
+    <p>Code Example:</p>
+    <pre>
+        <code>
+            var person = {
+            firstName:"your first name",
+            lastName:"your last name",
+            stdId:"your student id"
+            }
+        </code>
+    </pre>
+</body>
+</html>
