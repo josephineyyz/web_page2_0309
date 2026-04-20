@@ -16,16 +16,16 @@
         }
 
         th {
-            background-color: gray;
+            background-color: yellow;
             color: white;
         }
 
         tr:nth-child(odd) td {
-            background-color: yellow;
+            background-color: gray;
         }
 
         tr:nth-child(even) td {
-            background-color: lightgray;
+            background-color: yellow;
         }
 
         .fixed-box {
