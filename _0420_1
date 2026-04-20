@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 20</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: gray;
+            color: white;
+        }
+
+        tr:nth-child(odd) td {
+            background-color: yellow;
+        }
+
+        tr:nth-child(even) td {
+            background-color: lightgray;
+        }
+
+        .fixed-box {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            border: 3px solid green;
+            padding: 15px;
+            width: 200px;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>3</td>
+        </tr>
+    </table>
+
+    <div class="fixed-box">
+        This div element has position: fixed;
+    </div>
+
+</body>
+</html>
