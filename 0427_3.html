@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise-27</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #3498db; 
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #3498db;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .content-wrapper {
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        /* 上方綠色區塊 */
+        .header-block {
+            background-color: #8bc34a;
+            height: 150px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        .cyan-blocks-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .cyan-block {
+            background-color: #00bcd4;
+            height: 120px;
+            border-radius: 5px;
+        }
+
+        .gray-blocks-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+            gap: 15px;
+        }
+
+        .gray-block {
+            background-color: grey;
+            height: 80px;
+            border-radius: 5px;
+        }
+
+        @media (min-width: 480px) {
+            .cyan-blocks-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .gray-blocks-container {
+                grid-template-columns: repeat(4, 1fr); 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-wrapper">
+            <div class="header-block"></div>
+            <div class="cyan-blocks-container">
+                <div class="cyan-block"></div>
+                <div class="cyan-block"></div>
+                <div class="cyan-block"></div>
+            </div>
+            <div class="gray-blocks-container">
+                <div class="gray-block"></div>
+                <div class="gray-block"></div>
+                <div class="gray-block"></div>
+                <div class="gray-block"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
