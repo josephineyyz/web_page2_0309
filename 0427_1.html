@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>exercise 23 : button</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, "Microsoft JhengHei", sans-serif;
+      background: white;
+      color: black;
+    }
+
+    .page {
+      width: 720px;
+      margin: 40px auto;
+      background: white;
+      padding: 24px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .image-box {
+      width: 496px;
+      margin: 0 auto 18px;
+      border: 1px solid white;
+      padding: 10px;
+    }
+
+    .top-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .preview-label {
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .detail-btn {
+      height: 40px;
+      line-height: 40px;
+      padding: 0 25px;
+      border: 1px solid black;
+      border-radius: 10px;
+      background: white;
+      color: black;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .detail-btn:hover {
+      background: #f1f1f1;
+    }
+
+    .image-box img {
+      width: 70%;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .detail-panel {
+      display: none;
+      width: 496px;
+      margin: 0 auto;
+      border-top: 1px solid #ccc;
+      padding-top: 14px;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .detail-panel.show {
+      display: block;
+    }
+
+    .detail-panel h2 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      color: grey;
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="image-box">
+      <div class="top-row">
+        <span class="preview-label">預覽</span>
+        <button class="detail-btn" id="detailBtn">收起資訊</button>
+      </div>
+
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Scenery" />
+    </div>
+
+    <section class="detail-panel" id="detailPanel">
+      <h2>圖片詳細資訊</h2>
+      <p><strong>圖片名稱：</strong>風景</p>
+      <p><strong>圖片尺寸：</strong>500px × 220px</p>
+      <p><strong>說明：</strong>this is 一張公路的照片</p>
+    </section>
+  </main>
+
+  <script>
+    const button = document.getElementById("detailBtn");
+    const panel = document.getElementById("detailPanel");
+
+    button.addEventListener("click", function () {
+      panel.classList.toggle("show");
+
+      if (panel.classList.contains("show")) {
+        button.textContent = "收起資訊";
+      } else {
+        button.textContent = "顯示資訊";
+      }
+    });
+  </script>
+</body>
+</html>
