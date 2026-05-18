@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Person Object Properties</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin:40px;
+        }
+
+        h1{
+            color:blue;
+        }
+
+        .box{
+            border:1px solid black;
+            padding:15px;
+            margin:10px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>JavaScript Object Properties</h1>
+
+    <div class="box">
+        <h3>Original Object:</h3>
+        <p id="original"></p>
+    </div>
+
+    <div class="box">
+        <h3>List of Properties:</h3>
+        <ul id="properties"></ul>
+    </div>
+
+    <div class="box">
+        <h3>Object after deleting age:</h3>
+        <p id="afterDelete"></p>
+    </div>
+
+<script>
+
+    // Create object
+    var Person = {
+        firstName: "Tony",
+        lastName: "Lee",
+        age: 50,
+        eyeColor: "Blue"
+    };
+
+    // Display original object
+    document.getElementById("original").innerHTML =
+    JSON.stringify(Person);
+
+    // List all properties
+    for(var key in Person){
+
+        var listItem = document.createElement("li");
+
+        listItem.textContent =
+        key + " : " + Person[key];
+
+        document.getElementById("properties")
+        .appendChild(listItem);
+    }
+
+    // Delete age property
+    delete Person.age;
+
+    // Display object after deleting age
+    document.getElementById("afterDelete").innerHTML =
+    JSON.stringify(Person);
+
+</script>
+
+</body>
+</html>
